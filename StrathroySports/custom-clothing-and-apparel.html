@@ -1,0 +1,99 @@
+<!-- custom-clothing-and-apparel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runner • Custom Clothing & Apparel</title>
+  <!-- Google Font for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Main stylesheet (contains layout, nav, card, utility classes) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav">
+      <!-- Navigation links -->
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Collections</a></li>
+        <li><a href="custom-clothing-and-apparel.html" class="nav__link nav__link--active">Brands</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact-us-location.html" class="nav__link">Contact us</a></li>
+      </ul>
+      <!-- Brand logo/text -->
+      <div class="nav__brand">   Strathroy sports
+        Cart <span class="nav__cart-count">1</span>      
+      <!-- Cart button -->      
+      <a href="cart.html" class="nav__cart">
+        Cart <span class="nav__cart-count">1</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT: Custom Clothing & Apparel -->
+  <main class="product-section">
+    <!-- Page title -->
+    <h1 class="background-title" style="color: rgba(0,0,0,0.05); font-family: 'Playfair Display', serif; font-size: 200px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 1;">
+      Strathroy sports
+    </h1>
+
+    <!-- Section heading (above grid) -->
+    <h2 class="page-heading" style="position: relative; z-index: 2; text-align: center; margin-bottom: 40px; font-size: 2rem; color: #333;">
+      Custom Clothing & Apparel
+    </h2>
+
+    <!-- Grid of custom-apparel cards -->
+    <section class="product-grid" style="position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+      <!-- Card #1 -->
+      <article class="card">
+        <!-- Product image -->
+        <img src="images/tshirt.jpg"
+             alt="Custom T-Shirt Printing"
+             class="product-image" style="width:100%; height:auto; border-radius:4px;"/>
+        <!-- Product title -->
+        <h3 style="margin-top:12px; font-size:1.25rem; color:#333;">Custom T-Shirt Printing</h3>
+        <!-- Short description -->
+        <p style="font-size:0.9rem; color:#555;">Design your own graphic tee with our high-quality DTG printing.</p>
+        <!-- Learn more link -->
+        <a href="#" class="material-box__link" style="margin-top:8px; display:inline-block;">Learn more →</a>
+      </article>
+
+      <!-- Card #2 -->
+      <article class="card">
+        <img src="images/hoodie.jpg"
+             alt="Personalized Hoodies"
+             class="product-image" style="width:100%; height:auto; border-radius:4px;"/>
+        <h3 style="margin-top:12px; font-size:1.25rem; color:#333;">Personalized Hoodies</h3>
+        <p style="font-size:0.9rem; color:#555;">Choose your color and add text or logo to our premium hoodies.</p>
+        <a href="#" class="material-box__link" style="margin-top:8px; display:inline-block;">Learn more →</a>
+      </article>
+
+      <!-- Card #3 -->
+      <article class="card">
+        <img src="images/caps.jpg"
+             alt="Embroidered Caps"
+             class="product-image" style="width:100%; height:auto; border-radius:4px;"/>
+        <h3 style="margin-top:12px; font-size:1.25rem; color:#333;">Embroidered Caps</h3>
+        <p style="font-size:0.9rem; color:#555;">Add your logo or name to high-quality cotton caps.</p>
+        <a href="#" class="material-box__link" style="margin-top:8px; display:inline-block;">Learn more →</a>
+      </article>
+
+      <!-- Card #4 -->
+      <article class="card">
+        <img src="images/jersey.jpg"
+             alt="Custom Team Jerseys"
+             class="product-image" style="width:100%; height:auto; border-radius:4px;"/>
+        <h3 style="margin-top:12px; font-size:1.25rem; color:#333;">Custom Team Jerseys</h3>
+        <p style="font-size:0.9rem; color:#555;">Design matching jerseys for your team or event.</p>
+        <a href="#" class="material-box__link" style="margin-top:8px; display:inline-block;">Learn more →</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top:60px; padding:20px 0; background:#fff; text-align:center; color:#777; font-size:0.85rem;">
+    © 2025 Strathroy Sports — All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strathroy sports</title>
+  <!-- Google font for big background text -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="#" class="nav__link">Collections</a></li>
+        <li><a href="#" class="nav__link nav__link--active">Brands</a></li>
+        <li><a href="#" class="nav__link">About</a></li>
+        <li><a href="#" class="nav__link">Contact us</a></li>
+      </ul>
+      <div class="nav__brand"> Strathroy sports</div>
+      <a href="#" class="nav__cart">
+        Cart <span class="nav__cart-count">1</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- MAIN PRODUCT HERO SECTION -->
+  <section class="product-section">
+    <!-- Giant background title -->
+    <h1 class="background-title"> Strathroy sports</h1>
+
+    <!-- Two overlapping product images -->
+    <div class="product-images">
+      <img src="images/buuuts.png" alt="Trendy sneaker front view" class="product-image product-image--back"/>
+      <img src="images/buuuts2.png" alt="Trendy sneaker top view"   class="product-image product-image--front"/>
+    </div>
+
+    <!-- Top‐right short spec line -->
+    <p class="product-spec">
+      TRIPLE S TRAINERS CLEAR SOLE IN LIGHT BEIGE DOUBLE FOAM AND MESH
+    </p>
+
+    <!-- Bottom‐left tagline -->
+    <p class="product-tagline">
+      WOMEN’S TRIPLE S CLEAR SOLE TRAINERS IN BEIGE
+    </p>
+
+    <!-- Long description block -->
+    <div class="product-description">
+      <p>
+        Carbon footprint: we work to continually reduce the environmental footprint of our products. 
+        The remaining carbon emissions are screened with local activists in a participatory carbon program, 
+        calculated and offset. We invest funds into natural ecosystem projects that protect and restore 
+        natural ecosystems to tackle climate change.
+      </p>
+    </div>
+
+    <!-- Material info with “Read more” link -->
+    <div class="material-box">
+      <div class="material-box__title">Material:</div>
+      <div class="material-box__text">52% polyester, 48% polyurethane</div>
+      <a href="#" class="material-box__link">Read more →</a>
+    </div>
+
+    <!-- Bottom controls: size, price, add to cart -->
+    <div class="product-actions">
+      <div class="product-actions__control">
+        <label class="product-actions__label" for="size-select">Selected size</label>
+        <select id="size-select" class="product-actions__select">
+          <option>38</option>
+          <option>39</option>
+          <option>40</option>
+        </select>
+      </div>
+      <div class="product-actions__control">
+        <label class="product-actions__label">Price</label>
+        <div class="product-actions__price">$950</div>
+      </div>
+      <button class="product-actions__button">Add to cart</button>
+    </div>
+  </section>
+</body>
+</html>
