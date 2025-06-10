@@ -14,9 +14,15 @@ body {
 
 /* ========== HEADER / NAV ========== */
 .site-header {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0.5%;
+  border: 1px solid #6e6e6e;
+  border-radius: 8px;
   background: #fff;
-  padding: 20px 0;
+  padding: 22px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
 }
 .nav {
   width: 90%;
@@ -86,29 +92,30 @@ body {
 /* giant background text */
 .background-title {
   position: absolute;
-  top: -20px;
+  top: 220px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Playfair Display', serif;
   font-size: 240px;
   line-height: 1;
-  color: rgba(0,0,0,0.05);
+  color: rgba(15, 17, 17, 0.932);
   white-space: nowrap;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* overlapping product images container */
 .product-images {
   position: relative;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
 }
 .product-image {
   max-width: 60%;
   display: inline-block;
   object-fit: contain;
   position: relative;
+  z-index: 1;
 }
 .product-image--back {
   transform: translateX(-40px) rotate(-10deg);
@@ -116,6 +123,7 @@ body {
 .product-image--front {
   margin-left: -80px;
   transform: translateX(40px) rotate(10deg);
+  z-index: 1;
 }
 
 /* small uppercase spec line, top-right */
@@ -136,7 +144,7 @@ body {
 .product-tagline {
   position: absolute;
   bottom: 140px;
-  left: 0;
+  left: -10%;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -147,7 +155,7 @@ body {
 /* long paragraph description */
 .product-description {
   position: absolute;
-  top: 50%;
+  top: 22%;
   right: 0;
   width: 300px;
   transform: translateY(-50%);
@@ -183,7 +191,18 @@ body {
   border-bottom: 1px solid #333;
 }
 
-/* bottom controls section */
+/* bottom controls section
+
+
+.collection-scroll {
+    display: flex
+;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 8px 0;
+}
+    */
 .product-actions {
   position: absolute;
   bottom: 0;
@@ -215,7 +234,7 @@ body {
   background: #fff;
 }
 .product-actions__button {
-  padding: 12px;
+  padding: 10px;
   font-size: 1rem;
   font-weight: 500;
   border: none;
@@ -227,4 +246,182 @@ body {
 }
 .product-actions__button:hover {
   background: #555;
+}
+
+/* ========== Collections Section Styles (add to styles.css) ========== */
+
+/* Container background + padding */
+.collections-section {
+  background: #ffffff;
+  padding: 60px 0;
+}
+
+/* Center and constrain width */
+.collections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual collection block */
+.collection {
+  margin-bottom: 48px;
+  margin-top: 48px;
+  padding: 24px;
+}
+
+/* Collection title */
+.collection-title {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Wrapper to position arrows and scroller */
+.collection-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Scrollable row */
+.collection-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+/* Hide default browser scrollbar */
+.collection-scroll::-webkit-scrollbar {
+  display: none;
+}
+.collection-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Each item box */
+.collection-item {
+  flex: 0 0 auto;
+  width: 160px;
+}
+.collection-item img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Arrow buttons */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.scroll-left {
+  left: -16px;
+}
+.scroll-right {
+  right: -16px;
+}
+
+/* Collection description text */
+.collection-description {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* -------------------
+   Footer (site-footer)
+   ------------------- */
+.site-footer {
+  background-color: #222;       /* dark background */
+  color: #eee;                  /* light text */
+  padding: 40px 0;              /* vertical spacing */
+  font-size: 0.9rem;            /* slightly smaller text */
+}
+
+/* Center content and constrain width */
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flex-column wrapper for footer items */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;                    /* space between items */
+}
+
+/* Reset default list styles */
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;                    /* space between links */
+}
+
+/* Base link styling */
+.social-link {
+  color: inherit;               /* inherit light text */
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;               /* small clickable area */
+  transition: color 0.2s;
+}
+
+/* Underline reveal on hover */
+.social-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s;
+}
+
+.social-link:hover {
+  color: #1da1f2;               /* hover color (e.g. Twitter blue) */
+}
+
+.social-link:hover::after {
+  width: 100%;
+}
+
+/* Optional: adjust copyright text */
+.footer-text {
+  margin: 0;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav__links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .product-section {
+    padding: 20px;
+  }
+  .product-image {
+    max-width: 80%;
+  }
+  .product-actions {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+  .collections-section {
+    padding: 40px 0;
+  }
 }

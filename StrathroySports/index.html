@@ -72,6 +72,8 @@
           <option>38</option>
           <option>39</option>
           <option>40</option>
+          <option>41</option>
+          <option>42</option>
         </select>
       </div>
       <div class="product-actions__control">
@@ -81,5 +83,116 @@
       <button class="product-actions__button">Add to cart</button>
     </div>
   </section>
+  <!-- index.html (excerpt: add this inside <main> or right after your product hero) -->
+
+    <!-- ========== COLLECTIONS SECTION (Homepage Bottom) ========== -->
+  <section class="collections-section">
+    <div class="collections-container">
+      
+      <!-- Collection #1: Tops -->
+      <div class="collection">
+        <h2 class="collection-title">Tops Collection</h2>
+        <div class="collection-wrapper">
+          <!-- Left arrow -->
+          <button class="scroll-arrow scroll-left" aria-label="Scroll Tops Left">←</button>
+          <!-- Scrollable row of 6 images -->
+          <div class="collection-scroll">
+            <div class="collection-item"><img src="images/ui.png" alt="T-Shirt 1"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Tank Top"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Blouse"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Crop Tee"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Long Sleeve"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Graphic Tee"/></div>
+          </div>
+          <!-- Right arrow -->
+          <button class="scroll-arrow scroll-right" aria-label="Scroll Tops Right">→</button>
+        </div>
+        <p class="collection-description">
+          This collection is for tops and includes products such as T-shirts, tank tops, blouses, and more.
+        </p>
+      </div>
+      
+      <!-- Collection #2: Bottoms -->
+      <div class="collection">
+        <h2 class="collection-title">Bottoms Collection</h2>
+        <div class="collection-wrapper">
+          <button class="scroll-arrow scroll-left" aria-label="Scroll Bottoms Left">←</button>
+          <div class="collection-scroll">
+            <div class="collection-item"><img src="images/ui.png" alt="Jeans"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Shorts"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Chinos"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Joggers"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Leggings"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Cargo Pants"/></div>
+          </div>
+          <button class="scroll-arrow scroll-right" aria-label="Scroll Bottoms Right">→</button>
+        </div>
+        <p class="collection-description">
+          This collection is for bottoms such as jeans, shorts, joggers, chinos, and more.
+        </p>
+      </div>
+      
+      <!-- Collection #3: Footwear -->
+      <div class="collection">
+        <h2 class="collection-title">Footwear Collection</h2>
+        <div class="collection-wrapper">
+          <button class="scroll-arrow scroll-left" aria-label="Scroll Footwear Left">←</button>
+          <div class="collection-scroll">
+            <div class="collection-item"><img src="images/ui.png" alt="Sneakers"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Running Shoes"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Boots"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Sandals"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Loafers"/></div>
+            <div class="collection-item"><img src="images/ui.png" alt="Heels"/></div>
+          </div>
+          <button class="scroll-arrow scroll-right" aria-label="Scroll Footwear Right">→</button>
+        </div>
+        <p class="collection-description">
+          This collection is for footwear, featuring sneakers, boots, sandals, loafers, and more.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Minimal JS for left/right arrow scrolling -->
+  <script>
+    document.querySelectorAll('.collection').forEach(section => {
+      const scroller = section.querySelector('.collection-scroll');
+      const btnL = section.querySelector('.scroll-left');
+      const btnR = section.querySelector('.scroll-right');
+      // How much to scroll each click (px)
+      const scrollAmount = 240;
+      btnL.addEventListener('click', () => {
+        scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      btnR.addEventListener('click', () => {
+        scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+ <!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Copyright text -->
+      <p class="footer-text">&copy; 2025 Strathroy Sports. All rights reserved.</p>
+      <!-- Social links nav -->
+      <nav aria-label="Follow us on social media">
+        <ul class="social-list">
+          <li><a href="#" class="social-link">Facebook</a></li>
+          <li><a href="#" class="social-link">Instagram</a></li>
+          <li><a href="#" class="social-link">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+  <!-- End of Footer -->
+  <!-- END OF MAIN PRODUCT HERO SECTION -->
+
+  <!-- Optional JavaScript -->
+  <!-- Add your scripts here if needed -->
 </body>
 </html>
